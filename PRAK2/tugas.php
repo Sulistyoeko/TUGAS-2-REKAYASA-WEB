@@ -8,13 +8,10 @@ function curl($url){
     return $output;
 }
 
-// Ambil data JSON dari file PHP lain
 $send = curl("http://localhost/rekayasaweb/PRAK2/getWisata.php");
 
-// Decode JSON ke array asosiatif
 $data = json_decode($send, TRUE);
 
-// Tampilkan ke HTML Tabel
 echo "<table border='1' cellspacing='0' cellpadding='8'>";
 echo "<tr style='background-color: #f2f2f2; font-weight:bold;'>
         <td>KOTA</td>
@@ -33,4 +30,5 @@ foreach ($data as $row) {
 
 echo "</table>";
 ?>
+
 
